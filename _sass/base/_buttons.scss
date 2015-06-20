@@ -1,0 +1,48 @@
+#{$all-button-inputs}, .button {
+  -webkit-font-smoothing: antialiased;
+  @include appearance(none);
+  background-color: $action-color;
+  border-radius: $base-border-radius;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $base-font-family;
+  font-size: 1.5 * $base-font-size;
+  font-weight: normal;
+  line-height: 1.5;
+  padding: 0.5em 2em;
+  text-decoration: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  @include transition(background-color 0.3s ease-in-out);
+
+  &:active,
+  &:visited {
+    color: #fff;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $action-hover-color;
+    color: #fff;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+  &.medium {
+    font-size: 1.3 * $base-font-size;
+    padding: 0.5em 1.5em;
+  }
+
+  &.small {
+    font-size: 0.8 * $base-font-size;
+    padding: 0.3em 0.6em;
+    @include transition(none);
+  }
+}

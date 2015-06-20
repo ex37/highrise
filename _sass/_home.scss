@@ -1,0 +1,200 @@
+.home {
+
+	// not sure if I shell move these to base folder or not...
+	// also ideally need to create varialbe for the color :P
+	h1 {
+		font-size: 2.25em;
+		font-weight: normal;
+		line-height: 1.6em;
+		color: #5ca70b;
+		margin: 0;
+
+		@include media($tiny) {
+			font-size: 1.5em;
+		}
+	}
+
+	h2 {
+		font-weight: normal;
+		font-size: 1.75em;
+		line-height: 1.4em;
+	}
+
+	h3 {
+		font-weight: normal;
+		font-size: 1.1em;
+		margin: 1em 0;
+
+		@include media($tiny) {
+			font-size: 1em;
+			width: 88%;
+			margin: 0.5em auto;
+		}
+	}
+
+	hr {
+		width: 96%;
+		margin: 2em auto;
+		border: solid #f5f5f5;
+		border-width: 1px 0 0 0;
+	}
+	// // //
+
+	.header {
+		position: relative;
+
+		.latest {
+			text-align: center;
+			margin: 2em 0;
+		}
+		.button.small {
+			position: absolute;
+			top: 0;
+			right: 0;
+			margin: 0 1em;
+
+			@include media($tiny) {
+				position: static;
+			}
+		}
+
+		@include media($tiny) {
+			text-align: center;
+		}
+	}
+
+	.billboard {
+		@include outer-container;
+		padding: 2em 0;
+
+		.wrapper > div {
+			@include span-columns(6);
+
+			@include media($medium) {
+				@include span-columns(12);
+			}
+		}
+
+		.billboard-img {
+			text-align: center;
+
+			img {
+				max-width: em(720);
+				margin-left: em(-32);
+
+				@include media($medium) {
+					max-width: 100%;
+					margin: 0 auto;
+				}
+
+				@include media(min-width em(1024) max-width em(1090)) {
+					max-width: 120%;
+				}
+			}
+		}
+
+		.welcome {
+			margin-top: 80px;
+			text-align: center;
+
+			img {
+				margin: 1em auto 2em;
+				width: 200px;
+
+				@include media($tiny) {
+					display: none;
+				}
+			}
+
+			.learn-more {
+				margin: 2em 0 1em;
+
+				@include media($tiny) {
+					font-size: 0.75em;
+				}
+			}
+
+			@include media(max-width em(1090)) {
+				margin-top: 2.8em;
+			}
+
+		}
+	}
+
+	.quotes {
+		background-color: #f9f7f6;
+		padding: 3em 0;
+
+		& > div {
+			@include outer-container;
+		}
+
+		blockquote {
+			@include span-columns(8);
+			@include shift(2);
+
+			@include media($small) {			
+				@include span-columns(10);
+				@include shift(1);
+			}
+
+			@include media($tiny) {
+				img {
+					width: 102px;
+					float: none;
+					display: block;
+					margin: 0 auto;
+				}
+
+				cite {
+					width: 88%;
+				}
+			}
+		}
+	}
+
+	.about {
+		@include outer-container;
+		text-align: center;
+
+		h2 {
+			margin: 2em 0;
+		}
+
+		article {
+			@include span-columns(4);
+			
+			@include media($small) {
+				@include span-columns(12);
+			}
+
+			p {
+				font-size: 1.1em;
+				margin: 1em 0 2em;
+
+				@include media($tiny) {
+					font-size: 1.5em;
+				}
+			}
+		}
+	}
+
+
+	.call-to-action {
+		@include outer-container;
+		text-align: center;
+		padding: 2em 0 1em;
+
+		& > div {
+			@include span-columns(8);
+			@include shift(2);
+		}
+
+		h2 {
+			@include media($tiny) {
+				font-size: 1.375em;
+			}
+		}
+	}
+
+}

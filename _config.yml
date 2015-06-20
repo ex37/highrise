@@ -1,0 +1,11 @@
+# Site settings
+title: Highrise
+description: "Highrise makes running your business easy with shared tasks, notes, deals, email history, and more."
+
+# Build settings
+exclude: [README.md]
+markdown: kramdown
+safe: false
+sass:
+  sass_dir: _sass
+  style: :compressed

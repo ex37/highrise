@@ -1,0 +1,47 @@
+blockquote {
+  color: #777;
+
+  img {
+    float: left;
+    width: 140px;
+    margin-right: 45px;
+  }
+
+  p {
+    line-height: 1.6em;
+    font-size: 1.3em;
+    font-style: italic;
+    padding-bottom: 0.4em;
+
+    &:before, &:after {
+      color: #d3d2ca;
+      font-size: 48px;
+      line-height: 0;
+      position: relative;
+    }
+
+    &:before {
+      content: "“";
+      top: 22px;
+      right: 25px;
+      float: left;
+    }
+
+    &:after {
+      content: "”";
+      top: 17px;
+    }
+  }
+
+  cite {
+    font-style: italic;
+    font-size: 1.15em;
+    display: block;
+    text-align: right;
+
+    &:before {
+      content: "\2014 \00A0";
+    }
+  }
+  
+}
